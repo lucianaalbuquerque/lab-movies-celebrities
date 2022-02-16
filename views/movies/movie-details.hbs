@@ -1,0 +1,13 @@
+<h2>Info</h2>
+<p>Title: {{title}}</p>
+<p>Genre: {{genre}}</p>
+<p>Plot: {{plot}}</p>
+<p>Cast: 
+    {{#each cast}}
+{{name}} - {{occupation}} - "<i>{{catchPhrase}}</i>""
+    {{/each}}
+</p>
+<form action="/movies/{{_id}}/edit" method="get">
+<button>Edit Movie</button></form>
+<form action="/movies/{{_id}}/delete" method="post">
+<button>Delete Movie</button></form>
